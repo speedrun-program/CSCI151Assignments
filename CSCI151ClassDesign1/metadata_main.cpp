@@ -1,6 +1,5 @@
 
 #include "metadata.h"
-#include <iostream>
 
 int main()
 {
