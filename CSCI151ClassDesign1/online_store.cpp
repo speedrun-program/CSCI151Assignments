@@ -88,7 +88,7 @@ void Store::processOrder(const Order& order)
 */
 void printOrder(Order& order, Store& store)
 {
-	std::cout << "\n";
+	std::cout << "\nOrder:\n";
 	auto itEnd = order.getOrderMapCEnd();
 	for (auto it = order.getOrderMapCBegin(); it != itEnd; ++it)
 	{
