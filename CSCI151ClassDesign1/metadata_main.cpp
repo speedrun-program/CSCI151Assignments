@@ -26,6 +26,6 @@ int main()
     }
     
     std::string exitInput = "";
-	std::cout << "\nType visible character(s) and press Enter to end program.\n";
-	std::cin >> exitInput;
+    std::cout << "\nType visible character(s) and press Enter to end program.\n";
+    std::cin >> exitInput;
 }
