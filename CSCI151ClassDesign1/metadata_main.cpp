@@ -24,4 +24,8 @@ int main()
     {
         std::cout << e.what();
     }
+    
+    std::string exitInput = "";
+	std::cout << "\nType visible character(s) and press Enter to end program.\n";
+	std::cin >> exitInput;
 }
