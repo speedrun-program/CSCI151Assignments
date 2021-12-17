@@ -9,8 +9,6 @@
 
 bool anyPrime(const std::vector<int>& values);
 
-bool isPrime(int n);
-
 int main() {
     auto integers = randomIntegers();
     std::cout << "Integers: " << integers << "\n";
@@ -21,31 +19,22 @@ int main() {
     std::cin >> exitInput;
 }
 
-bool isPrime(int n)
-{
-    if (n < 2)
+bool anyPrime(const std::vector<int>& values) {
+    return std::any_of(values.begin(), values.end(), [](int n)
     {
-        return false;
-    }
-    // instructions said it's okay to use a raw for-loop here
-    for (int divisor = 2; divisor <= n / 2; divisor++)
-    {
-        if (n % divisor == 0)
+        if (n < 2)
         {
             return false;
         }
-    }
-    return true;
-}
-
-bool anyPrime(const std::vector<int>& values) {
-    for (int n : values)
-    {
-        if (isPrime(n))
+        // instructions said it's okay to use a raw for-loop here
+        for (int divisor = 2; divisor <= n / 2; divisor++)
         {
-            std::cout << n << " is a prime number\n";
-            return true;
+            if (n % divisor == 0)
+            {
+                return false;
+            }
         }
-    }
-    return false;
+        std::cout << n << " is a prime number\n";
+        return true;
+    });
 }
